@@ -1,6 +1,18 @@
 ## ----hidden, echo = FALSE-----------------------------------------------------
 knitr::opts_chunk$set(fig.cap = "", dev = "ragg_png")
 
+## ----hex-logo2, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo", eval = requireNamespace("ggplot2", quietly=TRUE) && requireNamespace("aRtsy", quietly=TRUE) && requireNamespace("gtable", quietly=TRUE), message = FALSE----
+library("aRtsy")
+library("ggplot2")
+
+gg <- canvas_planet(colorPalette("lava"), threshold = 3) +
+  scale_x_continuous(expand=c(0, 0)) +
+  scale_y_continuous(expand=c(0, 0))
+grob <- ggplotGrob(gg)
+grob <- gtable::gtable_filter(grob, "panel") # grab just the panel
+affiner::grid.isocube(top = grob, left = grob, right = grob,
+  gp_border = grid::gpar(col = "darkorange", lwd = 12))
+
 ## ----hex-logo, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo"----
 library("affiner")
 library("grid")
@@ -48,12 +60,6 @@ for (i in 1:3) {
                 vp_use = settings$vp)
     grid.polygon(xy_side$x, xy_side$y, gp = gp_border)
 }
-
-## ----hex-logo2, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo"----
-grid.newpage()
-grid.isocube(top = l_grobs$top, 
-             right = l_grobs$right,
-             left = l_grobs$left)
 
 ## ----die-faces, fig.width = 4.0, fig.height = 3.0, fig.alt = "The six die faces"----
 library("affiner")

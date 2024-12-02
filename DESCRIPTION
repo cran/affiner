@@ -2,7 +2,7 @@ Package: affiner
 Type: Package
 Title: A Finer Way to Render 3D Illustrated Objects in 'grid' Using
         Affine Transformations
-Version: 0.1.1
+Version: 0.1.3
 Authors@R: c(person("Trevor L.", "Davis", role = c("aut", "cre"),
                     email = "trevor.l.davis@gmail.com",
                     comment = c(ORCID = "0000-0001-6341-4639")))
@@ -11,15 +11,16 @@ URL: https://trevorldavis.com/R/affiner/
 BugReports: https://github.com/trevorld/affiner/issues
 License: MIT + file LICENSE
 Imports: graphics, grDevices, grid, R6, utils
-Suggests: ggplot2, gridpattern, knitr, ragg (>= 1.3.3), rgl, rlang,
-        rmarkdown, stats, testthat (>= 3.0.0), vdiffr, withr
+Suggests: aRtsy, ggplot2, gridpattern, gtable, knitr, ragg (>= 1.3.3),
+        rgl, rlang, rmarkdown, stats, testthat (>= 3.0.0), vdiffr,
+        withr
 VignetteBuilder: knitr, ragg, rmarkdown
 Encoding: UTF-8
 RoxygenNote: 7.3.1
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-10-10 06:05:16 UTC; trevorld
+Packaged: 2024-12-02 06:12:41 UTC; trevorld
 Author: Trevor L. Davis [aut, cre] (<https://orcid.org/0000-0001-6341-4639>)
 Maintainer: Trevor L. Davis <trevor.l.davis@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-10-14 12:00:43 UTC
+Date/Publication: 2024-12-02 06:40:02 UTC

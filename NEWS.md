@@ -1,3 +1,9 @@
+affiner 0.1.3
+=============
+
+* `isocubeGrob()` and `grid.isocube()` now make sure that the `fill` of `gp_border` is
+  always `"transparent"` (#58).
+
 affiner 0.1.1
 =============
 
