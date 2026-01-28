@@ -1,3 +1,17 @@
+affiner 2.0.1
+=============
+
+* `has_intersection()` is a generic S3 method which tests whether two objects have an intersection.
+* `intersection()` is a generic S3 method which computes the intersection of two objects.
+* `is_equivalent()` is a generic S3 method which tests whether two objects are "equivalent".
+  The `is_equivalent()` method for angle vectors tests whether two angles are congruent.
+  The `is_equivalent()` method for `Point1D`, `Line2D`, `Plane3D` classes tests whether they are the same point/line/plane after standardization.
+* `is_parallel()` is a generic S3 method which tests whether two objects are "parallel" (e.g. `Line2D` and `Plane3D` objects).
+* `isotoxal_2ngon_inner_radius()` computes the inner radius of an isotoxal `2n`-gon polygon (#66).  `star_inner_radius()` is an alias.
+* If R >= 4.4.0 can now also use `crossprod()` (in addition to `cross_product3d()`) to compute the
+  **vector** cross product of two `Coord3D` objects.
+* Can now use `ceiling()`, `floor()`, `round()`, `signif()`, and `trunc()` on `Coord1D`, `Coord2D`, and `Coord3D` objects (#63).
+
 affiner 0.1.3
 =============
 
@@ -52,7 +66,7 @@ Initial features
     + `*` either applies a "dot" product (if multiplying another `Coord1D`, `Coord2D`, or `Coord3D` object)
           or a "scaling" transformation (if multiplying a numeric value)
     + `/` applies a "scaling" transformation
-    + Unary `-` applies a "scaling" transformation whereas 
+    + Unary `-` applies a "scaling" transformation whereas
       binary `-` and `+` apply a "translation" transformation
 
   + Additional S3 methods:

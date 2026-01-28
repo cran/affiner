@@ -1,7 +1,7 @@
 ## ----hidden, echo = FALSE-----------------------------------------------------
 knitr::opts_chunk$set(fig.cap = "", dev = "ragg_png")
 
-## ----hex-logo2, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo", eval = requireNamespace("ggplot2", quietly=TRUE) && requireNamespace("aRtsy", quietly=TRUE) && requireNamespace("gtable", quietly=TRUE), message = FALSE----
+## ----hex-logo2, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo", eval = getRversion() >= "4.2.0" && requireNamespace("ggplot2", quietly=TRUE) && requireNamespace("aRtsy", quietly=TRUE) && requireNamespace("gtable", quietly=TRUE), message = FALSE----
 library("aRtsy")
 library("ggplot2")
 
@@ -13,7 +13,7 @@ grob <- gtable::gtable_filter(grob, "panel") # grab just the panel
 affiner::grid.isocube(top = grob, left = grob, right = grob,
   gp_border = grid::gpar(col = "darkorange", lwd = 12))
 
-## ----hex-logo, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo"----
+## ----hex-logo, fig.width = 4.5, fig.height = 4.5, fig.alt = "Isometric-cube hex logo", eval = getRversion() >= "4.2.0"----
 library("affiner")
 library("grid")
 
@@ -61,7 +61,7 @@ for (i in 1:3) {
     grid.polygon(xy_side$x, xy_side$y, gp = gp_border)
 }
 
-## ----die-faces, fig.width = 4.0, fig.height = 3.0, fig.alt = "The six die faces"----
+## ----die-faces, fig.width = 4.0, fig.height = 3.0, fig.alt = "The six die faces", eval = getRversion() >= "4.2.0"----
 library("affiner")
 library("grid")
 xyz_face <- as_coord3d(x = c(0, 0, 1, 1) - 0.5, y = c(1, 0, 0, 1) - 0.5, z = 0.5)
@@ -112,7 +112,7 @@ for (i in 1:6) {
               gp = gpar(fontsize = 18, face = "bold"))
 }
 
-## ----projected-die, fig.width = 3.0, fig.height = 3.0, fig.alt = "Parallel projection of a die"----
+## ----projected-die, fig.width = 3.0, fig.height = 3.0, fig.alt = "Parallel projection of a die", eval = getRversion() >= "4.2.0"----
 # re-order face grobs for our target projections
 # bottom = 6, north = 4, east = 5, west = 2, south = 3, top = 1
 l_face_grobs <- l_face_grobs[c(6, 4, 5, 2, 3, 1)]

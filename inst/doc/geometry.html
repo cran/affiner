@@ -493,7 +493,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><code>{affiner}</code> affine transformations are post-multiplied so affine transformations can be applied in an intuitive order.</li>
 <li><code>abs()</code> computes Euclidean norm and <code>distance3d()</code> computes Euclidean distances</li>
 <li><code>range()</code> computes the axis-aligned bounding box ranges.</li>
-<li><code>cross_product3d()</code> computes cross products (<code>*</code> computes inner products).</li>
+<li><code>cross_product3d()</code> computes cross products (<code>*</code> computes inner products). If R &gt;= 4.4.0 you may also use <code>crossprod()</code>.</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="co"># Cartesian coordinates</span></span>
