@@ -427,6 +427,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><code>{affiner}</code> affine transformations are post-multiplied so affine transformations can be applied in an intuitive order.</li>
 <li><code>abs()</code> computes Euclidean norm and <code>distance2d()</code> computes Euclidean distances</li>
 <li><code>convex_hull2d()</code> computes the convex hull.</li>
+<li><code>dot_product2d()</code> computes dot (inner) products. You may also use the <code>*</code> operator and if R &gt;= 4.3.0 you may also use the <code>%*%</code> operator to compute dot (inner) products.</li>
 <li><code>range()</code> computes the axis-aligned bounding box ranges.</li>
 </ul></li>
 </ul>
@@ -493,7 +494,8 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><code>{affiner}</code> affine transformations are post-multiplied so affine transformations can be applied in an intuitive order.</li>
 <li><code>abs()</code> computes Euclidean norm and <code>distance3d()</code> computes Euclidean distances</li>
 <li><code>range()</code> computes the axis-aligned bounding box ranges.</li>
-<li><code>cross_product3d()</code> computes cross products (<code>*</code> computes inner products). If R &gt;= 4.4.0 you may also use <code>crossprod()</code>.</li>
+<li><code>cross_product3d()</code> computes cross products. If R &gt;= 4.4.0 you may also use <code>crossprod()</code>.</li>
+<li><code>dot_product3d()</code> computes dot (inner) products. You may also use the <code>*</code> operator and if R &gt;= 4.3.0 you may also use the <code>%*%</code> operator to compute dot (inner) products.</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="co"># Cartesian coordinates</span></span>

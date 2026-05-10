@@ -1,0 +1,130 @@
+#' Test whether an object has a Coord1D class
+#'
+#' `is_coord1d()` tests whether an object has a "Coord1D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_coord1d(x = sample.int(10, 3))
+#' is_coord1d(p)
+#' @export
+is_coord1d <- function(x) {
+	inherits(x, "Coord1D")
+}
+
+#' Test whether an object has a Coord2D class
+#'
+#' `is_coord2d()` tests whether an object has a "Coord2D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_coord2d(x = sample.int(10, 3), y = sample.int(10, 3))
+#' is_coord2d(p)
+#' @export
+is_coord2d <- function(x) {
+	inherits(x, "Coord2D")
+}
+
+#' Test whether an object has a Coord3D class
+#'
+#' `is_coord3d()` tests whether an object has a "Coord3D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_coord3d(x = sample.int(10, 3),
+#'                 y = sample.int(10, 3),
+#'                 z = sample.int(10, 3))
+#' is_coord3d(p)
+#' @export
+is_coord3d <- function(x) {
+	inherits(x, "Coord3D")
+}
+
+#' Test whether an object has a Point1D class
+#'
+#' `is_point1d()` tests whether an object has a "Point1D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_point1d(a = 1, b = 5)
+#' is_point1d(p)
+#' @export
+is_point1d <- function(x) inherits(x, "Point1D")
+
+#' Test whether an object has a Line2D class
+#'
+#' `is_line2d()` tests whether an object has a "Line2D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' l <- as_line2d(a = 1, b = 2, c = 3)
+#' is_line2d(l)
+#' @export
+is_line2d <- function(x) inherits(x, "Line2D")
+
+#' Test whether an object has a Plane3D class
+#'
+#' `is_plane3d()` tests whether an object has a "Plane3D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_plane3d(a = 1, b = 2, c = 3, 4)
+#' is_plane3d(p)
+#' @export
+is_plane3d <- function(x) inherits(x, "Plane3D")
+
+#' Test whether an object has a Polygon2D class
+#'
+#' `is_polygon2d()` tests whether an object has a "Polygon2D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p <- as_polygon2d(as_coord2d(x = c(0, 1, 1, 0), y = c(0, 0, 1, 1)))
+#' is_polygon2d(p)
+#' @export
+is_polygon2d <- function(x) inherits(x, "Polygon2D")
+
+#' Test whether an object has a Segment2D class
+#'
+#' `is_segment2d()` tests whether an object has a "Segment2D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' p1 <- as_coord2d(x = c(0, 1), y = c(0, 0))
+#' p2 <- as_coord2d(x = c(1, 1), y = c(0, 1))
+#' s <- as_segment2d(p1, p2 = p2)
+#' is_segment2d(s)
+#' @export
+is_segment2d <- function(x) inherits(x, "Segment2D")
+
+#' Test whether an object has an Ellipse2D class
+#'
+#' `is_ellipse2d()` tests whether an object has an "Ellipse2D" class
+#'
+#' @param x An object
+#' @return A logical value
+#'
+#' @examples
+#' c1 <- as_ellipse2d(as_coord2d(0.5, 0.5), r = 0.5)
+#' is_ellipse2d(c1)
+#' is_ellipse2d(c1) && all(c1$is_circle)
+#' e1 <- as_ellipse2d(as_coord2d(0, 0), rx = 2, ry = 1)
+#' is_ellipse2d(e1)
+#' is_ellipse2d(e1) && all(e1$is_circle)
+#' @export
+is_ellipse2d <- function(x) inherits(x, "Ellipse2D")
